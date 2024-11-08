@@ -3,7 +3,53 @@
 }
 
 .widget{
-    background-color: antiquewhite;
-    border: 1px solid black;
-    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px 15px;
+    position: relative;
 }
+
+.title-widget{
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.row-widget{
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.widget .title{
+    margin: 0;
+}
+
+.widget .date{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+.widget .money{
+    font-weight: bold;
+    margin: 0;
+}
+
+.widget .lastPeriod{
+    color: red;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.widget .icon{
+    width: 60px;
+    position: absolute;
+    top:5px;
+    right: 5px;
+    border-radius: 16px;
+}
+
+.MyChart {
+    width: 280px;
+    height: 280px;
+  }
+

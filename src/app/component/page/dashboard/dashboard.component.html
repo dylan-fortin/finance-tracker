@@ -1,31 +1,59 @@
 <div class="container mx-auto">
-    <div class="row">
-        <div class="col-md-12 widget">
+    <div class="row mb-4 title-widget">
+        <div class="col-md-12">
             <ng-container *ngIf="auth.user$ | async as user">
-                <a class="nav-item nav-link" href="#">{{ user.name }}</a>
+                <h2>Welcome Back, {{ user.name }} 👋</h2>
             </ng-container>
+            <p>This is your Financial Dashboard Report</p>
+            <div class="col-md-4" style="display: flex;">
+                <select class="form-control form-control-sm me-2">
+                    <option>All accounts</option>
+                </select>
+                <select class="form-control form-control-sm">
+                    <option>Small select</option>
+                </select>
+            </div>
         </div>
     </div>
-    <div class="row" style="max-width: 1500px;">
-        <div class="col-md-4 widget">
-            test
+    <div class="row gx-4">
+        <div class="col-lg-4 mb-3">
+            <div class="widget col-md-12">
+                <h4 class="title">Remaining</h4>
+                <p class="date">Jul 17 - Aug 16,2024</p>
+                <h5 class="money"> $1,360.28</h5>
+                <p class="lastPeriod">-32% form last period</p>
+            </div>
         </div>
-        <div class="col-md-3 widget">
-            test
+        <div class="col-lg-4 mb-3">
+            <div class="widget col-md-12">
+                <h4 class="title">Income</h4>
+                <p class="date">Jul 17 - Aug 16,2024</p>
+                <h5 class="money"> $1,360.28</h5>
+                <p class="lastPeriod">-32% form last period</p>
+                <img src="icon/grow_icon.jpg" class="icon">
+            </div>
         </div>
-        <div class="col-md-4 widget">
-            test
+        <div class="col-lg-4 mb-3">
+            <div class="widget col-md-12">
+                <h4 class="title">Expenses</h4>
+                <p class="date">Jul 17 - Aug 16,2024</p>
+                <h5 class="money"> $1,360.28</h5>
+                <p class="lastPeriod">-32% form last period</p>
+                <img src="icon/costIcon.jpg" class="icon">
+            </div>
         </div>
     </div>
-    <div class="row" style="max-width: 1500px;">
-        <div class="col-3 widget me-1">
-            test
+    <div class="row gx-4">
+        <div class="col-md-8 mb-3">
+            <div class="widget col-md-12">
+                <h4 class="title">Transactions</h4>
+            </div>
         </div>
-        <div class="col-5 widget me-1">
-            test
-        </div>
-        <div class="col-3 widget">
-            test
+        <div class="col-lg-4 mb-3">
+            <div class="widget col-md-12">
+                <h4 class="title">Categories</h4>
+                <canvas  id="MyChart" >{{ chart }}</canvas>
+            </div>
         </div>
     </div>
 </div>
