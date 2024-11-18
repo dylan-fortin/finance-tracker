@@ -1,55 +1,67 @@
-.container{
-    margin: 1rem;
+.container {
+    margin: 0.8rem;
 }
 
-.widget{
+.widget {
     background-color: #fff;
     border-radius: 16px;
-    padding: 20px 15px;
+    padding: 20px;
     position: relative;
 }
 
-.title-widget{
-    background-color: #fff;
-    border-radius: 16px;
-    padding: 20px;
-}
-
-.row-widget{
-    border-radius: 16px;
-    padding: 20px;
-}
-
-.widget .title{
+.widget .title {
     margin: 0;
 }
 
-.widget .date{
+.widget .date {
     color: gray;
     font-size: 0.8rem;
 }
 
-.widget .money{
+.widget .money {
     font-weight: bold;
     margin: 0;
 }
 
-.widget .lastPeriod{
+.widget .lastPeriod {
     color: red;
     font-size: 0.8rem;
     margin: 0;
 }
 
-.widget .icon{
+.widget .icon {
     width: 60px;
     position: absolute;
-    top:5px;
+    top: 5px;
     right: 5px;
     border-radius: 16px;
 }
 
-.MyChart {
-    width: 280px;
-    height: 280px;
-  }
+.transactions-widget ul {
+    list-style-type: none;
+    padding: 0;
+}
 
+.transactions-widget li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.transactions-widget .title{
+    padding-bottom: 20px;
+}
+
+.transactions-widget .income {
+    color: green;
+}
+
+.transactions-widget .expense {
+    color: red;
+}
+
+.transactions-widget .transaction{
+    border: 1px solid rgb(243, 241, 241);
+    border-radius: 10px;
+    padding: 10px;
+}

@@ -1,24 +1,29 @@
 <div class="container mx-auto">
-    <div class="row mb-4 title-widget">
-        <div class="col-md-12">
-            <ng-container *ngIf="auth.user$ | async as user">
-                <h2>Welcome Back, {{ user.name }} 👋</h2>
-            </ng-container>
-            <p>This is your Financial Dashboard Report</p>
-            <div class="col-md-4" style="display: flex;">
-                <select class="form-control form-control-sm me-2">
-                    <option>All accounts</option>
-                </select>
-                <select class="form-control form-control-sm">
-                    <option>Small select</option>
-                </select>
+    <div class="row gx-4">
+        <div class="col-lg-12 mb-3">
+            <div class="widget ">
+                <ng-container *ngIf="auth.user$ | async as user">
+                    <h2>Welcome Back, {{ user.name }} 👋</h2>
+                </ng-container>
+                <p>This is your Financial Dashboard Report</p>
+                <div class="col-md-4" style="display: flex;">
+                    <select class="form-control form-control-sm me-2">
+                        <option>All accounts</option>
+                    </select>
+                    <select class="form-control form-control-sm">
+                        <option>Small select</option>
+                    </select>
+                </div>
+
+
             </div>
+
         </div>
     </div>
     <div class="row gx-4">
         <div class="col-lg-4 mb-3">
             <div class="widget col-md-12">
-                <h4 class="title">Remaining</h4>
+                <h4 class="title">My Balance</h4>
                 <p class="date">Jul 17 - Aug 16,2024</p>
                 <h5 class="money"> $1,360.28</h5>
                 <p class="lastPeriod">-32% form last period</p>
@@ -46,13 +51,33 @@
     <div class="row gx-4">
         <div class="col-md-8 mb-3">
             <div class="widget col-md-12">
-                <h4 class="title">Transactions</h4>
+                <h4 class="title">Monthly Summary</h4>
             </div>
         </div>
         <div class="col-lg-4 mb-3">
             <div class="widget col-md-12">
-                <h4 class="title">Categories</h4>
-                <canvas  id="MyChart" >{{ chart }}</canvas>
+                <h4 class="title">Spending Breakdown</h4>
+
+            </div>
+        </div>
+    </div>
+    <div class="row gx-4">
+        <div class="col-md-6 mb-3">
+            <div class="widget transactions-widget col-md-12">
+                <h4 class="title">Last Transactions</h4>
+                <ul>
+                    <li class="transaction" *ngFor="let transaction of transactions">
+                      <span class="col-lg-2">Restaurant</span>
+                      <span class="col-lg-2">{{ transaction.description }}</span>
+                      <span class="col-lg-2" [ngClass]="transaction.type">{{ transaction.amount | currency }}</span>
+                      <span class="col-lg-2">{{ transaction.date | date: 'shortDate' }}</span>
+                    </li>
+                  </ul>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="col-md-12 widget">
+               
             </div>
         </div>
     </div>
